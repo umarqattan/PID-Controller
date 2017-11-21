@@ -12,11 +12,12 @@ Self-Driving Car Engineer Nanodegree Program
 * The PID controller updates proprotional error, integral error, and derivative error depending on the position of the simulated car relative to the track, and a method to update the steer value based on the sum of the errors of the PID. With a bit of trial and error, I tuned the P, I, and D parameters of the PID contorller 
 
   * P: Proportional Coefficient
-    * If this parameter is tuned in such a way that it surpasses 0.4, the steering angle makes it so that car nearly veers off the track right at the beginning of the track session. Anything between 0.2 and 0.3 ensures the car doesn't steer too significantly. When P is set to 0.25, the car is able to steer safely around the track and the car's movement looks rather smooth.
+    * If this parameter is tuned in such a way that it surpasses 0.25, the steering angle makes it so that car nearly veers off the track right at the beginning of the track session. Anything between 0.2 and 0.3 ensures the car doesn't steer too significantly. When P is set to 0.25, the car is able to steer safely around the track and the car's movement looks rather smooth.
   * I: Integral Coefficient
     * If this parameter is tuned in such a way that it surpasses 0.0001, the car turns radically and jumps off the track quickly. This number could be zero and would still drive around the track safely.
   * D: Differential Coefficient
     * If this parameter is tuned in such a way that it surpasses 5.0, the car's turns are more fine. The smaller the number, the longer the delay between turns, which can make movements jerky. When the parameter is set to 10.0, each chance the track changes angle, the car's steering angle adjusts slightly at the right time it seems, even if it's a small adjustment. This ensures for safe driving.
+  * PID (P: 0.25, I: 0.0001, D: 5.0)
 
 ## Dependencies
 
